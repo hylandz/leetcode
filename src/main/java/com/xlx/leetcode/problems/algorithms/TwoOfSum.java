@@ -1,6 +1,7 @@
 package com.xlx.leetcode.problems.algorithms;
 
-import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 两数之和:
@@ -14,18 +15,43 @@ import org.junit.jupiter.api.Test;
  */
 public class TwoOfSum {
 
-	@Test
-	public int[] solution(int[] nums, int target) {
-		int[] arry = new int[nums.length];
+	/**
+	 * 思路:
+	 *     数组的每个数字和后面的所有数字相加,然后和target比较
+	 * 需要2轮循环,第一轮循环数组的每个数字(n次),第二轮循环(不包含第一轮的数字)其他数字(n次)
+	 * 在第二轮中判断第一轮数字和第二轮数字相加的结果是否==target,相等将下标存入集合
+	 * @param nums 数组
+	 * @param target 目标
+	 */
+	public static int[] solution(int[] nums, int target) {
+		List<Integer> list = new ArrayList<>(nums.length);
+		//
 		for (int i = 0; i < nums.length; i++) {
-			for (int j = 1; j < nums.length - i; j++) {
+			for (int j = i + 1; j < nums.length; j++) {
 				int result = nums[i] + nums[j];
 				if (result == target){
-					System.out.println("符合目标的数值:" + nums[i] + "," + nums[j]);
-					return  arry;
+					list.add(i);
+					list.add(j);
 				}
 			}
 		}
-		return null;
+
+		//集合
+		int[] a = new int[list.size()];
+		for (int i = 0; i < list.size(); i++) {
+			a[i] = list.get(i);
+		}
+		return a;
+	}
+
+	public static void main(String[] args) {
+		int[] nums = {2, 7, 7,11, 15,4,5};
+		int target = 9;
+		int[] r = TwoOfSum.solution(nums,target);
+		for (int i :r) {
+			System.out.println(i);
+
+		}
+
 	}
 }
