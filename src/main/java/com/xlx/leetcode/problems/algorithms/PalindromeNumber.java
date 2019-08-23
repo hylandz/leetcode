@@ -20,29 +20,30 @@ package com.xlx.leetcode.problems.algorithms;
 public class PalindromeNumber {
 
 	/**
-	 * 思路:
-	 *
+	 * 思路:[官方]
+	 * 1.负数或者正数末尾是0的都不是回文
+	 * 2.将数值的后一半回文,然后与前一半比较,如12 21,[21]的回文12
 	 * @param x 整数
 	 * @return boolean
 	 */
 	public boolean isPalindrome(int x) {
+
+		//负数或者正数末尾是0的都不是回文
+		if (x < 0 || (x % 10 == 0 && x != 0) ){
+			return false;
+		}
+
+		//回文数
 		int rev = 0;
 
-		int origin = x;
-
-		while (x > 0){
-			//获取尾数值
-			int tail = x % 10;
-
-			rev = rev * 10 + tail;
-
+		//只比较原数的一半,可以防止int数值范围溢出
+		while (x > rev){
+			rev = rev * 10 + rev % 10;
 			x /= 10;
 		}
 
-		if (rev == origin){
-			return true;
-		}
-		return false;
+		// 12321,x=12时,rev=123,就需要去除末位
+		return x == rev || x == rev / 10;
 	}
 
 
