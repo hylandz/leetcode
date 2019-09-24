@@ -36,5 +36,8 @@ public class ListSource implements Cloneable{
 		HashMap<String, Object> hashMap = new HashMap<>();
 		Hashtable<String,String> hashtable = new Hashtable<>();
 		TreeMap<Integer,String> treeMap = new TreeMap<>();
+		
+		StringBuilder builder = new StringBuilder();
+		StringBuffer buffer = new StringBuffer();
 	}
 }
