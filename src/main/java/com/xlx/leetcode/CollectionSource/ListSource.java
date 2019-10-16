@@ -1,6 +1,5 @@
-package com.xlx.leetcode.javajdk8.CollectionSource;
+package com.xlx.leetcode.CollectionSource;
 
-import javax.jws.Oneway;
 import java.util.*;
 
 /**

@@ -1,4 +1,4 @@
-package com.xlx.leetcode.javajdk8.CollectionSource;
+package com.xlx.leetcode.CollectionSource;
 
 /**
  * 位运算
