@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xlx</groupId>
-    <artifactId>dp</artifactId>
+    <artifactId>leetcode</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>design-pattern</name>
+    <name>leetcode</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
