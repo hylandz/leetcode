@@ -1,5 +1,5 @@
 package com.xlx.leetcode.other.SortedOrder;
-
+import java.util.Arrays;
 /**
  * 插入排序
  * 未排序的数,向后依次与排序好的数比较
@@ -38,6 +38,7 @@ public class InsertSort {
              j--;
             }
             array[j] = target;
+	    System.out.println("第" + (i+1) +"次遍历的结果:" + Arrays.toString(array));
         }
         return array;
     }
@@ -46,10 +47,7 @@ public class InsertSort {
     public static void main(String[] args) {
        int[] array ={1,12,5,4,9,6};
         final int[] sorted = fastSorted(array);
-        System.out.println("排序好的数组-----------");
-        for (int a : sorted){
-            //{1,4,5,6,9,12}
-           System.out.print(a);
-       }
+        System.out.println("排序完成的数组:" + Arrays.toString(array));
+        
     }
 }
