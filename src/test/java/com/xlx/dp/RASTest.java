@@ -13,10 +13,9 @@ import java.util.Map;
  */
 public class RASTest {
     
-    private String publicKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2g+p4SEx2l+Qg0hWvT6qh3MrtnEHcy2VnSpPn/xF3iStp6G+z8gyvtgTdImRMV2YNzrV4HrYuX5uFfp89Xtu5jaxPILUHplauWhNjatMvmi2LAKVXv";
-    private String privateKey = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAPaD6nhITHaX5CDSFa9PqqHcyu2cQdzLZWdKk+f/EXeJK2nob7PyDK+2BN0iZExXZg3OtXgeti5fm4V+nz1e27mNrE8gtQemVq5aE2Nq0y+aLYsApVe9o0KICqoiKdcluc6x3WFlQfF5YpHymbRSFLDynAyXt6Rzg9TVjcXmYb4jAgMBAAECgYAtDwGtiLGJP8wv/5Z9G9e5jEz/T39uZzMaxTPxxNqhec4Ypqa8QnL1LxUGgoHIvnTl8zGSSjLMmScpKHLc2djZXugrwXSy0rHI15b5gLL1N4ODssKEQ+dZ3E8efLcOpHTUbtXIjvetmXMZpipkaQHgqSCZ8ycvt55t8PS4QsGJWQJBAP1Ap71oFIMDn6j8l+yPTxzV4SfjaIsp1c0TGZg1DtAXv76gfFL2Ft8+M+IK9ESQWXkm4ooPmgfzB/U3dK2ccr0CQQD5MIy0LdlxJMc9zEB2U6Z6uDY/HmetJohetcS60cUITbta4ZysOYF2SdQGgzKc3Z1FahI68CX4oXUers8QV3JfAkEAihL9ISwkusV3//cvkX8UwADwEAJRVkZJ1dRLCQwsdlHsba8r+UNIdxB/0wbr5JHa5k3IB0O4VAsx1IUWrSz19QJAE0n3yka2SzTOm3EBGGe3Pk6eHFqtKdEOw04MsW1ldBQYSZunNgmphM+IMwza0RuyfdoNGTTXq5xL5ZkgfCJYvwJABqNqQo/vuCSWJABnBGJPUoLxiOgdl/7rBVqaa2jKZn4vGH+j2KfkDZcJ3iZxjfVJf46wvu1YYZHXEPlWkxGZ/w==";
-    
-    //@Before
+    private String publicKey;
+    private String privateKey;
+    @Before
     public void init() throws Exception{
         System.out.println("-------------创建密钥对");
         Map<String,Object> map = RSACoder.initKey();
