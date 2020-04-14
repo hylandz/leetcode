@@ -1,4 +1,4 @@
-package com.xlx.leetcode.problems.algorithms;
+package com.xlx.leetcode.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;

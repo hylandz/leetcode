@@ -1,4 +1,4 @@
-package com.xlx.leetcode.problems.concurrency;
+package com.xlx.leetcode.multithreading;
 
 /**
  * 多线程按顺序打印
